@@ -1,8 +1,8 @@
 # linked-list
 
 code for insertion
-
-public static void insertElement(int i) {
+```
+	public static void insertElement(int i) {
 		
 		if(count == 10) {
 			System.out.println("Linked list in full.");
@@ -17,3 +17,4 @@ public static void insertElement(int i) {
 		}	
 		count++;
 	}
+```
