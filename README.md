@@ -39,6 +39,8 @@ code for insertion
 		}
 
 		Node newNode = new Node(value, prev.getNext());
+		if(prev == tail)
+			tail = newNode;
 		prev.setNext(newNode);
 		count++;
 	}
