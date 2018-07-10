@@ -16,6 +16,9 @@ public class LinkedList {
 		
 		
 		insertAtPos(5, 100);
+		
+		displayList();
+		new DeleteNode().deleteNode(5);
 		// print the linked list
 		displayList();
 	}
@@ -39,8 +42,10 @@ public class LinkedList {
 		for (int i = 1; i < pos - 1 && prev.getNext() != null; i++) {
 			prev = prev.getNext();
 		}
-
+		
 		Node newNode = new Node(value, prev.getNext());
+		if(prev == tail)
+			tail = newNode;
 		prev.setNext(newNode);
 		count++;
 	}
@@ -82,7 +87,7 @@ public class LinkedList {
 			System.out.print(node.getValue() + (node.getNext() == null ? "" : " -> "));
 			node = node.getNext();
 		}
-
+		System.out.println();
 	}
 
 }
